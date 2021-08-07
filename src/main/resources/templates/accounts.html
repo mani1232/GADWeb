@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of accounts</title>
+</head>
+<body>
+<div th:switch="${accounts}" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h2 th:case="null">No accounts yet!</h2>
+    <div th:case="*">
+        <h2>Accounts</h2>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Login</th>
+                <th>Password</th>
+                <th>Mail</th>
+                <th>Mail Password</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="account : ${accounts}">
+                <td th:text="${account.id}"></td>
+                <td th:text="${account.login}"></td>
+                <td th:text="${account.password}"></td>
+                <td th:text="${account.mail}"></td>
+                <td th:text="${account.mailPassword}"></td>
+                <td><a th:href="@{/edit/{id}(id=${account.id})}">Edit</a></td>
+                <td><a th:href="@{/delete/{id}(id=${account.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/add">Add a new account</a></p>
+</div>
+
+</body>
+</html>

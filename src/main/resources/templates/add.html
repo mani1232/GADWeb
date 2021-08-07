@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add account</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<form id="decor" action="#" th:action="@{/add}" th:object="${account}" method="post"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+  <div id="form-left-decoration"></div>
+  <div id="form-right-decoration"></div>
+  <div id="circle"></div>
+  <div id="form-inner">
+    <label for="login"></label><input type="text" th:field="*{login}" id="login" placeholder="login">
+  <span th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></span>
+
+    <label for="password"></label><input type="text" th:field="*{password}" id="password" placeholder="password">
+  <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+
+    <label for="mail"></label><input type="email" th:field="*{mail}" id="mail" placeholder="mail">
+  <span th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}"></span>
+
+    <label for="mailPassword"></label><input type="text" th:field="*{mailPassword}" id="mailPassword" placeholder="mailPassword">
+  <span th:if="${#fields.hasErrors('mailPassword')}" th:errors="*{mailPassword}"></span>
+
+  <input type="submit" value="Add Account">
+    </div>
+</form>
+
+</body>
+</html>
