@@ -34,14 +34,19 @@ public class AccountController {
     }
 
     accountRepository.save(account);
-    return "redirect:/";
+    return "redirect:/accounts";
 
   }
 
-  @GetMapping("/")
+  @GetMapping("/accounts")
   public String accounts(Model model) {
     model.addAttribute("accounts", accountRepository.findAll());
     return "accounts";
+  }
+
+  @GetMapping("/")
+  public String index() {
+    return "index";
   }
 
   @GetMapping("/delete/{id}")
@@ -51,7 +56,7 @@ public class AccountController {
         .orElseThrow(() -> new RuntimeException("Accounts not found: " + id));
 
     accountRepository.delete(account);
-    return "redirect:/";
+    return "redirect:/accounts";
 
   }
 

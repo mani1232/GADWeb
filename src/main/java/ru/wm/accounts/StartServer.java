@@ -9,5 +9,4 @@ public class StartServer {
 	public static void main(String[] args) {
 		SpringApplication.run(StartServer.class, args);
 	}
-
 }

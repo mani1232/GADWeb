@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Add account</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link th:href="@{css/styleForm.css}" rel="stylesheet" />
 </head>
 <body>
 
-<form id="decor" action="#" th:action="@{/add}" th:object="${account}" method="post"
+<form class="decor" action="#" th:action="@{/add}" th:object="${account}" method="post"
       xmlns:th="http://www.w3.org/1999/xhtml">
   <div id="form-left-decoration"></div>
   <div id="form-right-decoration"></div>
