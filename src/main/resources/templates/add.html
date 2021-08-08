@@ -9,10 +9,11 @@
 
 <form class="decor" action="#" th:action="@{/add}" th:object="${account}" method="post"
       xmlns:th="http://www.w3.org/1999/xhtml">
-  <div id="form-left-decoration"></div>
-  <div id="form-right-decoration"></div>
-  <div id="circle"></div>
-  <div id="form-inner">
+  <div class="form-left-decoration"></div>
+  <div class="form-right-decoration"></div>
+  <div class="circle"></div>
+  <div class="form-inner">
+    <h2 class="text">Add account</h2>
     <label for="login"></label><input type="text" th:field="*{login}" id="login" placeholder="login">
   <span th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></span>
 
