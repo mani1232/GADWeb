@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #101212;
+}
+.button {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border: none;
+    alignment: center;
+    width: 100%;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    background-color: #085200;
+    font-family: 'Enriqueta', arial, serif;
+    line-height: 1.25; margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0b7300;
+    color: black;
+}

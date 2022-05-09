@@ -6,6 +6,7 @@
 body {
   padding: 0;
   margin: 0;
+  background: #101212;
 }
 
 #notfound {
@@ -26,7 +27,8 @@ body {
   max-width: 767px;
   width: 100%;
   line-height: 1.4;
-  padding: 0 15px;
+  background: #ffffff;
+  border-radius: 30px;
 }
 
 .notfound .notfound-404 {
@@ -37,6 +39,7 @@ body {
 }
 
 .notfound .notfound-404 h1 {
+  border-radius: 30px;
   font-family: 'Titillium Web', sans-serif;
   font-size: 186px;
   font-weight: 900;
@@ -64,6 +67,8 @@ body {
 }
 
 .notfound a {
+  position: absolute;
+  left: 50%;
   font-family: 'Titillium Web', sans-serif;
   display: inline-block;
   text-transform: uppercase;
